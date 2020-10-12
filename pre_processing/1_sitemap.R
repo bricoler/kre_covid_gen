@@ -17,6 +17,17 @@ library("httr")
 
 #1.xml-bol a blogcimek leszedese es tarolasa
 #oooooooooooooooooooooooooooooooooooooooooooooo
+
+#1.1 mainxml-bol alxml-ek leszedese es tarolasa
+install.packages("xml2")
+library(xml2)
+mainxml1 <- read_xml("https://blog.hu/blogs.xml")
+#<sitemap>\n  <loc>https://blog.hu/blogs.0.xml</loc>\n</sitemap>
+
+#1.2 alxml-kbol a blogcimek kinyerese
+#
+#
+
 #<url>
 #<loc>https://szentendreikozugyek.blog.hu/</loc>
 #<lastmod>-0001-11-30T00:00:00+0100</lastmod>
