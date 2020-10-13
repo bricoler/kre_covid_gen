@@ -3,30 +3,39 @@
 #2. blogok sitemap felepitese
 
 #blog.hu website crawler
-install.packages("rvest")
-install.packages("xml2")
-install.packages("Rcrawler")
-install.packages("httr")
+#install.packages("rvest")
+#install.packages("xml2")
+#install.packages("Rcrawler")
+#install.packages("httr")
+#install.packages("xml2")
 
 system("java -version")
 library("xml2")
 library("Rcrawler")
 library("rvest")
 library("httr")
-
+library(xml2)
 
 #1.xml-bol a blogcimek leszedese es tarolasa
 #oooooooooooooooooooooooooooooooooooooooooooooo
 
 #1.1 mainxml-bol alxml-ek leszedese es tarolasa
-install.packages("xml2")
-library(xml2)
-mainxml1 <- read_xml("https://blog.hu/blogs.xml")
-#<sitemap>\n  <loc>https://blog.hu/blogs.0.xml</loc>\n</sitemap>
+mainxml1 <- as_list(read_xml("https://blog.hu/blogs.xml")) #xml ami az xml-ket tartalmazza
 
-#1.2 alxml-kbol a blogcimek kinyerese
-#
-#
+alxml1 <- NULL #alxml-ek listaja
+for (i in c(1:328)) {alxml1[i]<-as.character(unname(mainxml1$sitemapindex[1]$sitemap$loc[1]))}
+
+#1.2 alxml-kbol a blogcimek kinyerese #forras: alxml1, ami 328 xml
+
+webcmk1 <- data.frame(oldanev=as.character("weboldal https cime"),lastmod="-0001-11-30T00:00:00+0100",changefreq=as.character("yearly"),priority=0.2)
+
+for (i in c(1:328))
+{
+tempxml1<-as_list(read_xml(alxml1[i]))
+webcmk1$oldalnev[i]<-
+webcmk1$oldalnev[i]<-
+}
+
 
 #<url>
 #<loc>https://szentendreikozugyek.blog.hu/</loc>
