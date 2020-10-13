@@ -43,7 +43,7 @@ for (i in c(1:l_mainxml1))
 			changefreq1<-as.character(unname(tempxml1$urlset[j]$url$changefreq[1]))
 			priority1<-as.character(unname(tempxml1$urlset[j]$url$priority[1]))
 
-			cbind(webcmk1, data.frame(oldanev=as.character(oldalnev1),lastmod=lastmod1,changefreq=as.character(changefreq1),priority=as.numeric(priority1)))
+			webcmk1<-rbind(webcmk1, data.frame(oldanev=as.character(oldalnev1),lastmod=lastmod1,changefreq=as.character(changefreq1),priority=as.numeric(priority1)))
 			}
 	}
 
