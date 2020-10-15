@@ -1,1 +1,0 @@
-#koncept nem volt jo
