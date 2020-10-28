@@ -1,0 +1,4 @@
+H.1. A koronavírussal kapcsolatos blogbejegyzések nyelvezete nem egységes, klaszterekre bonthatóak.  
+H.2. A koronavírussal kapcsolatos bejegyzések száma kezdeti felugrás után visszaesett.
+H.3. A koronavírus környezetében található szavak eleinte gyorsan változtak és később egységesedtek. (Milyen szavak/fogalmak kíséretében jelent meg a koronavírus és ez időben hogyan változott?)
+H.4. A koronavírussal kapcsolatos tartalmakban főként negatív érzelmi töltésű szavak találhatóak.
